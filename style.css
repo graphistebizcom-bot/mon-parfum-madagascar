@@ -1,0 +1,666 @@
+/* --- VARIABLES LUXE --- */
+:root {
+    --gold: #c5a059;
+    --dark: #111111;
+    --grey: #f9f9f9;
+    --text: #333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Playfair Display', serif, Arial; /* Style écriture luxe */
+    background-color: white;
+    color: var(--text);
+}
+
+.page-container { display: flex; flex-direction: column; min-height: 100vh; }
+.content-wrap { flex: 1; }
+
+/* --- NAVIGATION FLEXBOX --- */
+.main-header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+/* --- HERO SECTION AVEC ANIMATION --- */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('images/accueil.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.animate-title {
+    font-size: 4rem;
+    animation: fadeInDown 1.5s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FLEXBOX CONTENU --- */
+.features-section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+    padding: 40px;
+    background: var(--grey);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.card-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+
+/* --- BOUTON --- */
+.btn {
+    padding: 15px 40px;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* --- FOOTER FLEXBOX --- */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-section { flex: 1; min-width: 200px; }
+.footer-section h4 { color: var(--gold); margin-bottom: 20px; }
+.footer-section ul { list-style: none; }
+.footer-section a { color: #888; text-decoration: none; line-height: 2; }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- MEDIA QUERIES RESPONSIVE --- */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; height: auto; padding: 20px; }
+    .nav-links { margin-top: 20px; gap: 15px; }
+    .animate-title { font-size: 2.5rem; }
+/* --- VARIABLES LUXE --- */
+:root {
+    --gold: #c5a059;
+    --dark: #111111;
+    --grey: #f9f9f9;
+    --text: #333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Playfair Display', serif, Arial; /* Style écriture luxe */
+    background-color: white;
+    color: var(--text);
+}
+
+.page-container { display: flex; flex-direction: column; min-height: 100vh; }
+.content-wrap { flex: 1; }
+
+/* --- NAVIGATION FLEXBOX --- */
+.main-header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+/* --- HERO SECTION AVEC ANIMATION --- */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('images/accueil.jpg ?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.animate-title {
+    font-size: 4rem;
+    animation: fadeInDown 1.5s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FLEXBOX CONTENU --- */
+.features-section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+    padding: 40px;
+    background: var(--grey);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.card-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+
+/* --- BOUTON --- */
+.btn {
+    padding: 15px 40px;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* --- FOOTER FLEXBOX --- */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-section { flex: 1; min-width: 200px; }
+.footer-section h4 { color: var(--gold); margin-bottom: 20px; }
+.footer-section ul { list-style: none; }
+.footer-section a { color: #888; text-decoration: none; line-height: 2; }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- MEDIA QUERIES RESPONSIVE --- */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; height: auto; padding: 20px; }
+    .nav-links { margin-top: 20px; gap: 15px; }
+    .animate-title { font-size: 2.5rem; }
+}
+
+/* --- PAGE PRODUITS --- */
+.products-page {
+    background-color: #fff;
+    padding-bottom: 80px;
+}
+
+.page-intro {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.page-intro h1 {
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+/* GRILLE PRODUITS AVEC FLEXBOX */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.product-card {
+    background: white;
+    width: 350px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+    overflow: hidden; /* Pour que l'image ne dépasse pas au zoom */
+}
+
+/* ANIMATION IMAGE */
+.product-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.product-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.product-card:hover .product-img-container img {
+    transform: scale(1.1); /* Zoom au survol */
+}
+
+/* OVERLAY PRIX (KEYFRAMES / TRANSITION) */
+.overlay-buy {
+    position: absolute;
+    bottom: -50px; /* Caché au début */
+    left: 0;
+    width: 100%;
+    background: rgba(197, 160, 89, 0.9); /* Or transparent */
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.4s ease;
+}
+
+.product-card:hover .overlay-buy {
+    bottom: 0; /* Apparaît au survol */
+}
+
+.price {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* INFOS PRODUIT */
+.product-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #999;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* PETIT BOUTON ÉLÉGANT */
+.btn-sm {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 8px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-sm:hover {
+    background: var(--gold);
+    color: white;
+}
+
+/* RESPONSIVE PRODUITS */
+@media (max-width: 900px) {
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+/* --- SECTION CONTACT --- */
+.contact-page {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px; /* Espace entre les deux colonnes */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* PANNEAU INFOS */
+.contact-info-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--gold);
+    padding-top: 5px;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-item p {
+    color: #666;
+}
+
+:root {
+    --gold: #c5a059;
+    --gold-light: #e0cda9;
+    --dark: #111111;
+    --grey-dark: #333;
+    --bg-light: #f9f9f9;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+Pour donner un aspect encore plus "Haute Parfumerie" à ta section contact, on va passer sur un design Minimaliste Chic.
+
+L'idée est d'utiliser des lignes très fines, un contraste entre le noir profond et l'or, et un effet de "verre dépoli" (glassmorphism) très léger.
+
+Remplace la partie Contact de ton fichier style.css par ce nouveau code :
+
+CSS
+/* ============================================================
+   NOUVEAU DESIGN CONTACT : CONCIERGERIE DE LUXE
+   ============================================================ */
+
+.contact-page {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+/* Conteneur principal en Flexbox */
+.contact-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.05); /* Ombre très légère et large */
+    border: 1px solid #f0f0f0;
+}
+
+/* --- COLONNE GAUCHE : INFOS --- */
+.contact-info-panel {
+    flex: 1;
+    background: #111; /* Noir profond */
+    color: white;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info-panel h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--gold);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(10px); /* Petit effet au survol */
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: var(--gold);
+    width: 50px;
+}
+
+.info-item p {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: #bbb;
+}
+
+/* --- COLONNE DROITE : FORMULAIRE --- */
+.contact-form-container {
+    flex: 1.5;
+    padding: 80px 60px;
+    background: #fff;
+}
+
+.luxury-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-group {
+    position: relative;
+    border-bottom: 1px solid #e0e0e0; /* Ligne fine au lieu d'une boîte */
+    transition: border-color 0.4s;
+}
+
+.form-group:hover {
+    border-bottom-color: var(--gold);
+}
+
+/* Input Styles */
+.luxury-form input, 
+.luxury-form textarea {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    background: transparent;
+    outline: none;
+}
+
+/* Label Flottant (Animation Keyframes/Transition) */
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* Animation quand on clique ou écrit */
+.luxury-form input:focus ~ label,
+.luxury-form input:valid ~ label,
+.luxury-form textarea:focus ~ label,
+.luxury-form textarea:valid ~ label {
+    top: -20px;
+    font-size: 0.7rem;
+    color: var(--gold);
+}
+
+/* --- BOUTON SUBMIT MAGNIFIQUE --- */
+.btn-submit {
+    align-self: flex-start; /* Bouton non étiré */
+    background: transparent;
+    color: #111;
+    border: 1px solid #111;
+    padding: 18px 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-submit:hover {
+    color: white;
+    background: #111;
+}
+
+/* --- MEDIA QUERY (RESPONSIVE) --- */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column; /* On empile sur mobile */
+    }
+    
+    .contact-info-panel, 
+    .contact-form-container {
+        padding: 60px 30px;
+    }
+}
